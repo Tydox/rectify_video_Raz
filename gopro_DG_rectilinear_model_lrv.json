@@ -1,0 +1,113 @@
+{
+  "camera_model_type": "gopro_metadata_inverse_plus_custom_gopro_projection_fit",
+  "name": "HERO11_camera_1_2p7K_60_SV_lrv",
+  "width": 768,
+  "height": 432,
+  "source_cx": 381.26597298383797,
+  "source_cy": 205.9983495266905,
+  "source_center_mode": "image_center",
+  "source_center_note": "optimized by custom GoPro checkerboard reprojection fit",
+  "ZFOV_deg": 148.0897,
+  "ZMPL": 0.7099,
+  "MAPX": [
+    1.21,
+    -1.2758,
+    1.7752
+  ],
+  "MAPY": [
+    0.9358,
+    0.4462,
+    -0.7678,
+    -0.3572,
+    1.1577,
+    0.3527
+  ],
+  "POLY": [
+    0.0,
+    1.8148,
+    0.1059,
+    -0.6544,
+    0.35,
+    -0.0,
+    0.0
+  ],
+  "map_direction": "inverse",
+  "scale_mode": "zfov",
+  "scale_px_per_model_unit": 550.0713320857318,
+  "scale_x_px_per_model_unit": 625.2656797526995,
+  "scale_y_px_per_model_unit": 474.87698441876415,
+  "scale_px_per_model_unit_note": "Average of x/y scale for backward compatibility. The actual remap code uses scale_x_px_per_model_unit and scale_y_px_per_model_unit.",
+  "calibration_method": "custom_gopro_projection_fit_raw_checkerboard",
+  "rectilinear_output_K": [
+    [
+      284.7412914168989,
+      0.0,
+      381.26597298383797
+    ],
+    [
+      0.0,
+      279.6206944385678,
+      205.9983495266905
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "output_width": 768,
+  "output_height": 432,
+  "D_and_G_ready_model": true,
+  "undistortion_prescription": "Use GoPro POLY/MAPX/MAPY with optimized source_cx/source_cy and scale_x/scale_y to remap raw GoPro pixels into the same-size rectilinear pinhole image defined by rectilinear_output_K.",
+  "rectilinear_output_K_source": "canonical D&G K_out chosen by gopro_central_local_scale from the optimized GoPro source model",
+  "rectilinear_output_K_role": "This is the K matrix of the undistorted rectilinear image. Use this exact K with Dumble-and-Gibbens after remapping horizon points/images through this model.",
+  "rectilinear_output_K_note": "The final checkerboard calibration objective uses GoPro POLY/MAPX/MAPY directly, not OpenCV distortion coefficients. K_out defines the canonical undistorted pinhole image used by D&G.",
+  "primary_model_file": "gopro_DG_rectilinear_model.json",
+  "backward_compatible_copy": "gopro_metadata_model_inverse.json",
+  "D_and_G_usage": "Use this model to remap raw GoPro pixels/images into the same-size rectilinear image, then use rectilinear_output_K as the Dumble-and-Gibbens K matrix.",
+  "D_and_G_validation_summary_file": "dg_rectilinear_pinhole_validation_summary.json",
+  "D_and_G_validation_status": "good",
+  "D_and_G_validation_fixed_pose_overall_rmse_px": 0.19993286440507163,
+  "D_and_G_validation_solvepnp_overall_rmse_px": 0.1998120180384771,
+  "scaled_model_info": {
+    "quality_label": "lrv",
+    "scaled_from_width": 2704,
+    "scaled_from_height": 1520,
+    "target_width": 768,
+    "target_height": 432,
+    "sx_width_scale": 0.28402366863905326,
+    "sy_height_scale": 0.28421052631578947,
+    "original_aspect_ratio": 1.7789473684210526,
+    "target_aspect_ratio": 1.7777777777777777,
+    "aspect_ratio_fractional_error": 0.000657462195923778,
+    "source_cx_original": 1342.373946547263,
+    "source_cy_original": 724.809007593911,
+    "source_cx_scaled": 381.26597298383797,
+    "source_cy_scaled": 205.9983495266905,
+    "scale_x_original": 2201.4562474626296,
+    "scale_y_original": 1670.8634636956517,
+    "scale_x_scaled": 625.2656797526995,
+    "scale_y_scaled": 474.87698441876415,
+    "rectilinear_output_K_original": [
+      [
+        1002.5266301969981,
+        0.0,
+        1342.373946547263
+      ],
+      [
+        0.0,
+        983.8505915431089,
+        724.809007593911
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "scaling_note": "K, source center, scale_x_px_per_model_unit, and scale_y_px_per_model_unit were scaled from the original calibration resolution. MAPX/MAPY/POLY/ZFOV/ZMPL were kept unchanged.",
+    "warnings": [
+      "NOTE: lrv model says source_center_mode='image_center', but source_cx/source_cy are not exactly the nominal image center. I treated the saved source_cx/source_cy as the calibrated/optimized values and scaled them directly."
+    ]
+  }
+}
