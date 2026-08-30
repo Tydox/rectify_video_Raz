@@ -66,8 +66,7 @@ You select between them via `RunConfig.rectify_mode` (`"widen"` or `"original"`)
 
 ## `RunConfig` — one object instead of scattered globals
 
-Everything that used to be loose module-level variables in `main.py` now
-lives on one dataclass:
+You use this class to edit the rectification parameters, you can change them in 'main' :)
 
 ```python
 @dataclass
@@ -99,10 +98,7 @@ class RunConfig:
 Notes:
 
 - The `crop_top_px`/`crop_bottom_px`/`crop_left_px`/`crop_right_px` defaults
-  (`145, 100, 300, 300`) intentionally match the hard-coded values `main.py`
-  uses (`top_crop=100, side_crop=300` → `crop_top_px=top_crop+45`,
-  `crop_bottom_px=top_crop`, `crop_left_px=side_crop`, `crop_right_px=side_crop`).
-  Leaving these at their defaults reproduces `main.py`'s exact crop.
+  (`145, 100, 300, 300`) 
 - `rectify_mode="original"` switches to `rectify_video` — in that mode, the
   widen-specific fields (`target_aspect_ratio`, `crop_percentile`, the four
   crop-px fields) are simply ignored.
